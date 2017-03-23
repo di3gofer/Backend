@@ -34,9 +34,13 @@ $(function(){
     bienes: [],
 
     Init: function(){
+      this.cargarSelect()
       this.getInitialBienes()
       this.fetchBienesInfo()
       this.getCustomSearch()
+    },
+    cargarSelect: function(){
+      $('select').material_select()
     },
     getCustomSearch: function(){
       var self = this

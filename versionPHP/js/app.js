@@ -6,11 +6,15 @@ $(function(){
 
     Init: function(){
       var self = this
+      self.cargarSelect()
+      self.cargarTodos()
       self.formulario.submit(function(e){
         e.preventDefault()
         self.searchBienes()
       })
-      self.cargarTodos()
+    },
+    cargarSelect: function(){
+      $('select').material_select()
     },
     searchBienes: function(e){
       var self = this
